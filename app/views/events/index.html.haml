@@ -1,2 +1,14 @@
-%h1 Landings#index
-%p Find me in app/views/landings/index.html.erb
+.page-header
+%table.table.table-striped
+  %thead
+    %tr
+      %th ID
+      %th name
+      %th description
+      %th status
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= event.id
+        %td= event.name
+        %td= event.description
