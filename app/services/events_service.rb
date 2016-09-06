@@ -32,7 +32,7 @@ class EventsService
       description: response['description'],
       rsvp_limit: response['rsvp_limit'],
       status: Event.statuses[response['status']],
-      link: response['link'],
+      link: response['link']
     }
   end
 end

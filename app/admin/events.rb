@@ -1,7 +1,7 @@
 ActiveAdmin.register Event do
   permit_params :name,
     :rsvp_limit,
-    :status, 
+    :status,
     :time,
     :created,
     :link,
