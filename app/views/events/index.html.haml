@@ -4,11 +4,10 @@
     %tr
       %th ID
       %th name
-      %th description
       %th status
   %tbody
     - @events.each do |event|
       %tr
         %td= event.id
-        %td= event.name
-        %td= event.description
+        %td= link_to event.name, event_path(event)
+        %td= event.status
