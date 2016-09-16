@@ -29,10 +29,16 @@ class EventsService
     {
       meetup_id: response['id'],
       name: response['name'],
-      description: response['description'],
       rsvp_limit: response['rsvp_limit'],
       status: Event.statuses[response['status']],
-      link: response['link']
+      time: convert_time(response['time']),
+      created: convert_time(response['created']),
+      link: response['link'],
+      description: response['description']
     }
+  end
+
+  def convert_time(milliseconds)
+    Time.at(milliseconds / 1000)
   end
 end
