@@ -1,0 +1,11 @@
+%nav.navbar.navbar-default{ role: 'navigation' }
+  .navbar-header
+    %button.navbar-toggle{ type: 'button', data: { toggle: 'collapse', target: '#navbar-collapse-1' } }
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    = link_to 'HOME', defined?(root_path) ? root_path : '#', class: 'navbar-brand'
+    = link_to 'MEETING ARCHIVE', events_path, class: 'navbar-brand'
+    = link_to 'FOR SPEAKERS', for_speakers_path, class: 'navbar-brand'
+    = link_to 'SPONSOR US', for_sponsors_path, class: 'navbar-brand'

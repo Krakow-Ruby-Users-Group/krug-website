@@ -8,6 +8,8 @@
     = csrf_meta_tags
     %meta{ content: 'width=device-width, initial-scale=1', name: 'viewport' }
   %body
-    = render partial: 'elements/navbar'
+    = render partial: 'elements/header'
     = bootstrap_flash
+    = render partial: 'elements/next_meeting'
     = yield
+    = render partial: 'elements/footer'
