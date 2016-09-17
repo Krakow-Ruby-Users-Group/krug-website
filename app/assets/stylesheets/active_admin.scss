@@ -1,8 +1,10 @@
 //= require activeadmin_addons/all
 // SASS variable overrides must be declared before loading up Active Admin's styles.
 //
-$upcoming-color: #2ecc71;
-$past-color: #e74c3c;
+@import "bootstrap_configuration";
+
+$upcoming-color: $krug-green;
+$past-color: $krug-red-darker;
 // To view the variables that Active Admin provides, take a look at
 // `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
 // Active Admin source.

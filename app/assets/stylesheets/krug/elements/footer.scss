@@ -1,0 +1,28 @@
+@import "bootstrap_configuration";
+
+#footer{
+  color: $invert-text-color;
+  #location-map {
+    background: image-url('footer_map.jpg') no-repeat center top;
+    height: 400px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #ilu-bottom {
+    background: image-url('ilu_bottom.svg') no-repeat right top;
+    margin-top: -325px;
+    min-height: 500px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  a {
+    color: $invert-text-color;
+    &.btn {
+      color: $krug-red;
+    }
+  }
+}

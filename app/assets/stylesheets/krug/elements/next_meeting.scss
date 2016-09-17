@@ -1,0 +1,13 @@
+@import "bootstrap_configuration";
+
+#next_meeting {
+  color: $invert-text-color;
+  background-image: image-url('bg_nextmeet.jpg');
+  height: 300px;
+  a {
+    color: $invert-text-color;
+    &.btn {
+      color: $krug-red;
+    }
+  }
+}

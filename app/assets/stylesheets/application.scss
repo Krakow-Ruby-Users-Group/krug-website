@@ -17,11 +17,17 @@
 *= require_self
 */
 @import "bootstrap_configuration";
-
 @import "bootstrap-sprockets";
-
 @import "bootstrap";
 
-.yield {
-  margin: 30px;
+section {
+  padding: 30px 0;
+}
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+  }
 }
