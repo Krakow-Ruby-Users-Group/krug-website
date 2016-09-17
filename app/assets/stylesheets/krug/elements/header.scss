@@ -1,12 +1,17 @@
 @import "bootstrap_configuration";
 
-#contact {
+header {
+  .lead, .navbar {
+    margin-bottom: 0px;
+  }
+  .logo {
+    width: 280px;
+  }
   .social-list {
-    height: 100%;
     .social-icon{
       display: inline-block;
       position: relative;
-      width: 100%;
+      width: 40px;
       vertical-align: middle;
       overflow: hidden;
     }
