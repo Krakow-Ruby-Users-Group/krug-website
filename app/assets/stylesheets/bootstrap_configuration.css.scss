@@ -29,6 +29,7 @@ $brand-danger:          #d9534f !default;
 $body-bg:               #fff !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
+$alternative-text-color:            #fff ;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -103,27 +104,6 @@ $component-active-bg:       $brand-primary !default;
 $caret-width-base:          4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
-
-
-//== Tables
-//
-//## Customizes the `.table` component with basic values, each used across all table variations.
-
-//** Padding for `<th>`s and `<td>`s.
-$table-cell-padding:            8px !default;
-//** Padding for cells in `.table-condensed`.
-$table-condensed-cell-padding:  5px !default;
-
-//** Default background color used for all tables.
-$table-bg:                      transparent !default;
-//** Background color used for `.table-striped`.
-$table-bg-accent:               #f9f9f9 !default;
-//** Background color used for `.table-hover`.
-$table-bg-hover:                #f5f5f5 !default;
-$table-bg-active:               $table-bg-hover !default;
-
-//** Border color for table and cell borders.
-$table-border-color:            #ddd !default;
 
 
 //== Buttons
@@ -376,32 +356,6 @@ $navbar-default-toggle-icon-bar-bg:        #888 !default;
 $navbar-default-toggle-border-color:       #ddd !default;
 
 
-//=== Inverted navbar
-// Reset inverted navbar basics
-$navbar-inverse-color:                      lighten($gray-light, 15%) !default;
-$navbar-inverse-bg:                         #222 !default;
-$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
-
-// Inverted navbar links
-$navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
-$navbar-inverse-link-hover-color:           #fff !default;
-$navbar-inverse-link-hover-bg:              transparent !default;
-$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
-$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
-$navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
-
-// Inverted navbar brand label
-$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:          #fff !default;
-$navbar-inverse-brand-hover-bg:             transparent !default;
-
-// Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg:            #333 !default;
-$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
-$navbar-inverse-toggle-border-color:        #333 !default;
-
-
 //== Navs
 //
 //##
@@ -519,35 +473,6 @@ $tooltip-arrow-width:         5px !default;
 $tooltip-arrow-color:         $tooltip-bg !default;
 
 
-//== Popovers
-//
-//##
-
-//** Popover body background color
-$popover-bg:                          #fff !default;
-//** Popover maximum width
-$popover-max-width:                   276px !default;
-//** Popover border color
-$popover-border-color:                rgba(0,0,0,.2) !default;
-//** Popover fallback border color
-$popover-fallback-border-color:       #ccc !default;
-
-//** Popover title background color
-$popover-title-bg:                    darken($popover-bg, 3%) !default;
-
-//** Popover arrow width
-$popover-arrow-width:                 10px !default;
-//** Popover arrow color
-$popover-arrow-color:                 $popover-bg !default;
-
-//** Popover outer arrow width
-$popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
-//** Popover outer arrow color
-$popover-arrow-outer-color:           fade_in($popover-border-color, 0.05) !default;
-//** Popover outer arrow fallback color
-$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%) !default;
-
-
 //== Labels
 //
 //##
@@ -569,87 +494,6 @@ $label-danger-bg:             $brand-danger !default;
 $label-color:                 #fff !default;
 //** Default text color of a linked label
 $label-link-hover-color:      #fff !default;
-
-
-//== Modals
-//
-//##
-
-//** Padding applied to the modal body
-$modal-inner-padding:         15px !default;
-
-//** Padding applied to the modal title
-$modal-title-padding:         15px !default;
-//** Modal title line-height
-$modal-title-line-height:     $line-height-base !default;
-
-//** Background color of modal content area
-$modal-content-bg:                             #fff !default;
-//** Modal content border color
-$modal-content-border-color:                   rgba(0,0,0,.2) !default;
-//** Modal content border color **for IE8**
-$modal-content-fallback-border-color:          #999 !default;
-
-//** Modal backdrop background color
-$modal-backdrop-bg:           #000 !default;
-//** Modal backdrop opacity
-$modal-backdrop-opacity:      .5 !default;
-//** Modal header border color
-$modal-header-border-color:   #e5e5e5 !default;
-//** Modal footer border color
-$modal-footer-border-color:   $modal-header-border-color !default;
-
-$modal-lg:                    900px !default;
-$modal-md:                    600px !default;
-$modal-sm:                    300px !default;
-
-
-//== Alerts
-//
-//## Define alert colors, border radius, and padding.
-
-$alert-padding:               15px !default;
-$alert-border-radius:         $border-radius-base !default;
-$alert-link-font-weight:      bold !default;
-
-$alert-success-bg:            $state-success-bg !default;
-$alert-success-text:          $state-success-text !default;
-$alert-success-border:        $state-success-border !default;
-
-$alert-info-bg:               $state-info-bg !default;
-$alert-info-text:             $state-info-text !default;
-$alert-info-border:           $state-info-border !default;
-
-$alert-warning-bg:            $state-warning-bg !default;
-$alert-warning-text:          $state-warning-text !default;
-$alert-warning-border:        $state-warning-border !default;
-
-$alert-danger-bg:             $state-danger-bg !default;
-$alert-danger-text:           $state-danger-text !default;
-$alert-danger-border:         $state-danger-border !default;
-
-
-//== Progress bars
-//
-//##
-
-//** Background color of the whole progress component
-$progress-bg:                 #f5f5f5 !default;
-//** Progress bar text color
-$progress-bar-color:          #fff !default;
-//** Variable for setting rounded corners on progress bar.
-$progress-border-radius:      $border-radius-base !default;
-
-//** Default progress bar color
-$progress-bar-bg:             $brand-primary !default;
-//** Success progress bar color
-$progress-bar-success-bg:     $brand-success !default;
-//** Warning progress bar color
-$progress-bar-warning-bg:     $brand-warning !default;
-//** Danger progress bar color
-$progress-bar-danger-bg:      $brand-danger !default;
-//** Info progress bar color
-$progress-bar-info-bg:        $brand-info !default;
 
 
 //== List group
@@ -751,57 +595,6 @@ $thumbnail-caption-padding:   9px !default;
 $well-bg:                     #f5f5f5 !default;
 $well-border:                 darken($well-bg, 7%) !default;
 
-
-//== Badges
-//
-//##
-
-$badge-color:                 #fff !default;
-//** Linked badge text color on hover
-$badge-link-hover-color:      #fff !default;
-$badge-bg:                    $gray-light !default;
-
-//** Badge text color in active nav link
-$badge-active-color:          $link-color !default;
-//** Badge background color in active nav link
-$badge-active-bg:             #fff !default;
-
-$badge-font-weight:           bold !default;
-$badge-line-height:           1 !default;
-$badge-border-radius:         10px !default;
-
-
-//== Breadcrumbs
-//
-//##
-
-$breadcrumb-padding-vertical:   8px !default;
-$breadcrumb-padding-horizontal: 15px !default;
-//** Breadcrumb background color
-$breadcrumb-bg:                 #f5f5f5 !default;
-//** Breadcrumb text color
-$breadcrumb-color:              #ccc !default;
-//** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $gray-light !default;
-//** Textual separator for between breadcrumb elements
-$breadcrumb-separator:          "/" !default;
-
-
-//== Carousel
-//
-//##
-
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
-
-$carousel-control-color:                      #fff !default;
-$carousel-control-width:                      15% !default;
-$carousel-control-opacity:                    .5 !default;
-$carousel-control-font-size:                  20px !default;
-
-$carousel-indicator-active-bg:                #fff !default;
-$carousel-indicator-border-color:             #fff !default;
-
-$carousel-caption-color:                      #fff !default;
 
 
 //== Close
