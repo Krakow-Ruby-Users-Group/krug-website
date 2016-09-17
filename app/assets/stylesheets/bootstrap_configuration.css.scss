@@ -7,15 +7,23 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+$krug-red:              #F1583E;
+$krug-red-dark:         #E64425;
+$krug-red-darker:       #B92A25;
+$krug-green:            #A6B23A;
+$krug-green-dark:       #889138;
+$krug-green-darker:     #6E7432;
+$krug-grey:             #ddd5d4;
+
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$gray-lighter:           $krug-grey !default;
 
-$brand-primary:         #f26e57 !default;
-$brand-success:         #5cb85c !default;
+$brand-primary:         $krug-red !default;
+$brand-success:         $krug-green !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
@@ -28,8 +36,8 @@ $brand-danger:          #d9534f !default;
 //** Background color for `<body>`.
 $body-bg:               #fff !default;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
-$alternative-text-color:            #fff ;
+$text-color:            $krug-green-darker !default;
+$invert-text-color:            #fff ;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
