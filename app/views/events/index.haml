@@ -11,3 +11,5 @@
         %td= event.id
         %td= link_to event.name, event_path(event)
         %td= event.status
+
+= paginate @events

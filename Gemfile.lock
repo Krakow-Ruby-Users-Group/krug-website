@@ -402,6 +402,7 @@ DEPENDENCIES
   inherited_resources!
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari
   listen (~> 3.0.5)
   pg
   polishgeeks-dev-tools

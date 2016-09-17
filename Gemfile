@@ -21,6 +21,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'activeadmin_addons'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
+gem 'kaminari'
 
 group :development, :test do
   gem 'polishgeeks-dev-tools'
