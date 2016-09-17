@@ -31,14 +31,20 @@ class EventsService
       name: response['name'],
       rsvp_limit: response['rsvp_limit'],
       status: Event.statuses[response['status']],
-      time: convert_time(response['time']),
-      created: convert_time(response['created']),
+      time: prepare_time(response['time']),
+      created: prepare_time(response['created']),
       link: response['link'],
-      description: response['description']
+      description: response['description'],
+      venue: prepare_venue(response['venue'])
     }
   end
 
-  def convert_time(milliseconds)
+  def prepare_venue(venue_hash)
+    return '' unless venue_hash
+    "#{venue_hash['name']}, #{venue_hash['address_1']}"
+  end
+
+  def prepare_time(milliseconds)
     Time.at(milliseconds / 1000)
   end
 end
