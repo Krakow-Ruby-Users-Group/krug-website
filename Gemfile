@@ -28,5 +28,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm', github: "capistrano/rvm"
   gem 'listen', '~> 3.0.5'
 end
