@@ -16,12 +16,16 @@
 
 *= require_self
 */
-@import "bootstrap_configuration";
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bootstrap_configuration';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 section {
   padding: 15px 0;
+}
+.vertical-align {
+  display: flex;
+  align-items: center;
 }
 .navbar-nav {
   width: 100%;

@@ -1,21 +1,53 @@
-%section#homepage
-  .container
-    .row
-      .col-sm-6.col-md-4
-        =image_tag 'ilu_attendees.svg', class: 'img-responsive center-block'
-        .caption
-          %h3 Rules for attendees
+#homepage
+  %section#rules
+    .container
+      .row
+        .col-sm-6.col-md-4
+          = image_tag 'ilu_attendees.svg', class: 'img-responsive center-block'
+          .caption
+            %h3 Rules for attendees
 
-      .col-sm-6.col-md-4
-        =image_tag 'ilu_lecturers.svg', class: 'img-responsive center-block'
-        .caption
-          %h3 Rules and resources for lecturers
+        .col-sm-6.col-md-4
+          = image_tag 'ilu_lecturers.svg', class: 'img-responsive center-block'
+          .caption
+            %h3 Rules and resources for lecturers
 
-      .col-sm-6.col-md-4
-        =image_tag 'ilu_sponsoring.svg', class: 'img-responsive center-block'
-        .caption
-          %h3 Sponsoring rules
-    .row
-      %h2 ORGANIZERS
-    .row
-      %h2 SPONSORS
+        .col-sm-6.col-md-4
+          = image_tag 'ilu_sponsoring.svg', class: 'img-responsive center-block'
+          .caption
+            %h3 Sponsoring rules
+
+  %section#organizers
+    .container
+      .row
+        .col-lg-12.text-left
+          %h2.section-heading ORGANIZERS
+      .row
+        .col-sm-4
+          .team-member
+            = image_tag 'http://lorempicsum.com/simpsons/200/200/1', class: 'img-responsive img-circle'
+            %h3 Sebastian B
+            %p.text-muted Lorem ipsum dolor
+
+        .col-sm-4
+          .team-member
+            = image_tag 'http://lorempicsum.com/simpsons/200/200/2', class: 'img-responsive img-circle'
+            %h3 Maciej Mensfeld
+            %p.text-muted Lorem ipsum dolor
+
+        .col-sm-4
+          .team-member
+            = image_tag 'http://lorempicsum.com/simpsons/200/200/4', class: 'img-responsive img-circle'
+            %h3 Krzysztof H
+            %p.text-muted Lorem ipsum dolor
+
+  %section#sponsors
+    .container
+      .row
+        .col-lg-12.text-left
+          %h2.section-heading SPONSORS
+          %ul.list-inline
+            - 7.times do
+              %li
+                = image_tag 'http://lorempicsum.com/simpsons/100/40/4', class: 'img-responsive'
+            %li=link_to 'SPONSOR US', for_sponsors_path, class: 'btn btn-default'
