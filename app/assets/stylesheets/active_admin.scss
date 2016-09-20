@@ -1,7 +1,7 @@
 //= require activeadmin_addons/all
 // SASS variable overrides must be declared before loading up Active Admin's styles.
 //
-@import "bootstrap_configuration";
+@import 'bootstrap_configuration';
 
 $upcoming-color: $krug-green;
 $past-color: $krug-red-darker;
@@ -13,12 +13,12 @@ $past-color: $krug-red-darker;
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
-@import "active_admin/mixins";
-@import "active_admin/base";
+@import 'active_admin/mixins';
+@import 'active_admin/base';
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "bootsy";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'bootsy';
 
 .status_tag {
   &.upcoming { background: $upcoming-color; }
@@ -27,4 +27,8 @@ $past-color: $krug-red-darker;
 
 .bootsy_text_area {
   height: 500px;
+}
+
+.label {
+  color: $krug-green-darker;
 }

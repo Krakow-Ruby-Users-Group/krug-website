@@ -1,4 +1,21 @@
 @import "bootstrap_configuration";
 
 #homepage {
+  .sponsor-logo {
+    float: left;
+    width: 50%;
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .sponsor-logo {
+      width: 25%;
+    }
+
+    .row {
+      margin-top: 50px;
+    }
+  }
 }

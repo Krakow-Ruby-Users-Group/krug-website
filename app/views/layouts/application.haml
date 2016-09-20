@@ -10,6 +10,6 @@
   %body
     = render partial: 'elements/header'
     = bootstrap_flash
-    = render partial: 'elements/next_meeting'
+    = render partial: 'elements/next_meeting' if @next_meeting
     = yield
     = render partial: 'elements/footer'

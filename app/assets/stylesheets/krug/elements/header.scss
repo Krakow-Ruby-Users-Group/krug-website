@@ -1,6 +1,11 @@
 @import "bootstrap_configuration";
 
 header {
+  background: image-url('ruby.svg') right top no-repeat,
+              image-url('ruby.svg') left top no-repeat;
+  background-attachment: fixed;
+
+
   .lead, .navbar {
     margin-bottom: 0px;
   }
@@ -17,4 +22,6 @@ header {
       overflow: hidden;
     }
   }
+
+
 }

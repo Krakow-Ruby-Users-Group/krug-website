@@ -5,7 +5,7 @@
         .h3 NEXT MEETING
         %p.lead= "#{@next_meeting.time.strftime('%d.%m.%Y')} @ #{@next_meeting.venue}"
         %p.lead= @next_meeting.name
-      .col-sm-6.center-block.text-center
-        .button-image.text-center
+      .col-sm-6.text-center
+        .button-image.center-block
           = link_to 'READ MORE', event_path(@next_meeting), class: 'btn btn-primary'
           = link_to 'MEETUP LINK', @next_meeting.link
