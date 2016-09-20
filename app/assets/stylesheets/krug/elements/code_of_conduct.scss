@@ -3,4 +3,14 @@
 #code-of-conduct {
   color: $invert-text-color;
   background-color: $krug-red;
+
+  .button-image{
+    background: image-url('bt_conduct.svg') no-repeat center center;
+    height: 217px;
+    width: 217px;
+    .btn{
+      position: relative;
+      top: 165px;
+    }
+  }
 }

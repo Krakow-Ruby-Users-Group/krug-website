@@ -4,4 +4,15 @@
   color: $invert-text-color;
   background-image: image-url('bg_nextmeet.png');
   height: 230px;
+
+  .button-image{
+    background: image-url('bt_nextmeet.svg') no-repeat center center;
+    margin-top: -15px;
+    height: 230px;
+    width: 173px;
+    .btn{
+      position: relative;
+      top: 140px;
+    }
+  }
 }
