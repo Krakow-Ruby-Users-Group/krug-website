@@ -1,19 +1,26 @@
 @import "bootstrap_configuration";
 
 #homepage {
-  .sponsor-logo {
-    float: left;
-    width: 50%;
-    height: 100px;
-    padding: 20px;
-    box-sizing: border-box;
+  .sponsors-list {
+    margin-top: 35px;
+    .sponsor-us {
+      margin-left: 60px;
+    }
+    .sponsor-logo {
+      padding: 5px 5px;
+      height: 70px;
+
+      .logo {
+        display:table-cell;
+        vertical-align:middle;
+        float:none;
+        max-height: 50px;
+      }
+    }
   }
 
-  @media (min-width: 768px) {
-    .sponsor-logo {
-      width: 25%;
-    }
 
+  @media (min-width: 768px) {
     .row {
       margin-top: 50px;
     }
