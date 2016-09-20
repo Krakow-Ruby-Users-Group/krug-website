@@ -2,7 +2,7 @@
   .container
     .row.vertical-align
       .col-sm-6
-        .h3 NEXT MEETING
+        %h2.section-heading NEXT MEETING
         %p.lead= "#{@next_meeting.time.strftime('%d.%m.%Y')} @ #{@next_meeting.venue}"
         %p.lead= @next_meeting.name
       .col-sm-6.text-center

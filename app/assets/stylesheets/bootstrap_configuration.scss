@@ -1,8 +1,25 @@
 //
+// Fonts
+// --------------------------------------------------
+@font-face {
+  font-family: 'OpenSans';
+  src: url('OpenSans.eot?#iefix') format('embedded-opentype'),  font-url('OpenSans.woff') format('woff'), font-url('OpenSans.ttf')  format('truetype'), font-url('OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ADAM-CGPRO';
+  src: font-url('ADAM-CGPRO.eot?#iefix') format('embedded-opentype'),  font-url('ADAM-CGPRO.otf')  format('opentype'),
+	     font-url('ADAM-CGPRO.woff') format('woff'), font-url('ADAM-CGPRO.ttf')  format('truetype'), font-url('ADAM-CGPRO.svg#ADAM.CGPRO') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+//
 // Variables
 // --------------------------------------------------
-
-
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -51,11 +68,11 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  'OpenSans', Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        'OpenSans' !default;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px

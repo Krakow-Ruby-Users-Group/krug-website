@@ -8,6 +8,7 @@ header {
 
   .lead, .navbar {
     margin-bottom: 0px;
+    font-family: 'ADAM-CGPRO';
   }
   .logo {
     width: 280px;
@@ -23,5 +24,10 @@ header {
     }
   }
 
-
+  @media (min-width: 768px) {
+    .navbar-nav > li > a {
+      padding-top: 35px;
+      padding-bottom: 20px;
+    }
+  }
 }
