@@ -1,9 +1,15 @@
+# Admin User
 AdminUser.create!(
   email: "admin@example.com",
   password: "password",
   password_confirmation: "password"
 )
 
+# Events
+# it download all KRUG events from meetup
+EventsService.new.call
+
+# Sponsors
 Sponsor.create!(
   name: 'Codecool',
   url: 'https://codecool.pl/',
