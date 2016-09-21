@@ -60,6 +60,8 @@ section {
   color: $krug-red;
   font-size: 1.3em;
   padding: 5px 20px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   &:hover, &:focus, &:active, &.active {
     background: #fff;
     color: $krug-green-dark;

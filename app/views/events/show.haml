@@ -1,5 +1,10 @@
 %section#event-show
   .container
     .row
-      .col-lg-12
-        %p= @event.description&.html_safe
+      .col-md-8
+        = @event.description&.html_safe
+      .col-md-4
+        %h2.section-heading OTHER MEETINGS
+        - @events.last(5).each do |event|
+          .other-meetups.col-md-8.col-offset-4
+            = link_to event.name, event_path(event)

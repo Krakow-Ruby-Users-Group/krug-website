@@ -1,0 +1,10 @@
+@import "bootstrap_configuration";
+
+#event-show {
+  .other-meetups {
+    margin-bottom: 20px;
+    a {
+      color: $krug-green-darker;
+    }
+  }
+}

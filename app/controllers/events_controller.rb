@@ -5,6 +5,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    id = params[:id].to_i
+    @event = Event.find(id)
+    @events = Event.where(id: ((id-3)..(id-1)))
   end
 end
