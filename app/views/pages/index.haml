@@ -3,19 +3,22 @@
     .container
       .row
         .col-sm-6.col-md-4
-          = image_tag 'ilu_attendees.svg', class: 'img-responsive center-block'
-          .caption.text-center
-            %h3 Rules for attendees
+          = link_to 'http://berlincodeofconduct.org/' do
+            = image_tag 'ilu_attendees.svg', class: 'img-responsive center-block'
+            .caption.text-center
+              %h3 Rules for attendees
 
         .col-sm-6.col-md-4
-          = image_tag 'ilu_lecturers.svg', class: 'img-responsive center-block'
-          .caption.text-center
-            %h3 Rules and resources for lecturers
+          = link_to for_speakers_url do
+            = image_tag 'ilu_lecturers.svg', class: 'img-responsive center-block'
+            .caption.text-center
+              %h3 Rules and resources for lecturers
 
         .col-sm-6.col-md-4
-          = image_tag 'ilu_sponsoring.svg', class: 'img-responsive center-block'
-          .caption.text-center
-            %h3 Sponsoring rules
+          = link_to for_sponsors_url do
+            = image_tag 'ilu_sponsoring.svg', class: 'img-responsive center-block'
+            .caption.text-center
+              %h3 Sponsoring rules
 
   %section#organizers
     .container

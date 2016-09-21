@@ -8,7 +8,7 @@
               .timeline-node
               .timeline-panel
                 .timeline-heading
-                  %h4= event.time
+                  %h4= "#{event.time.strftime('%d.%m.%Y, %I:%M %p')}"
                   %h4.subheading= event.name
                 .timeline-body
                   %h4= link_to 'read more & downloads', event_path(event)
