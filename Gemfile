@@ -36,3 +36,6 @@ group :development do
   gem 'capistrano-rvm', github: "capistrano/rvm"
   gem 'listen', '~> 3.0.5'
 end
+source 'https://rails-assets.org' do
+  gem 'rails-assets-Hover'
+end
