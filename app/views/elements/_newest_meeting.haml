@@ -8,4 +8,4 @@
       .col-sm-6.text-center
         .button-image.center-block
           = link_to 'READ MORE', event_path(@newest_meeting), class: 'btn btn-primary'
-          = link_to 'MEETUP LINK', @newest_meeting.link
+          = link_to 'MEETUP LINK', @newest_meeting.link, class: 'meetup-link'

@@ -10,7 +10,6 @@
 * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
 * file per style scope.
 *
-*= require Hover
 *= require bootsy
 *= require_tree .
 *= stub active_admin
@@ -21,12 +20,11 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+a {
+  transition: all 0.4s;
+}
 section {
   padding: 15px 0;
-}
-.vertical-align {
-  display: flex;
-  align-items: center;
 }
 .navbar-nav {
   width: 100%;
@@ -61,16 +59,25 @@ section {
   color: $krug-red;
   font-size: 1.3em;
   padding: 5px 20px;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
   &:hover, &:focus, &:active, &.active {
     background: #fff;
     color: $krug-green-dark;
     border: 3px solid $krug-green-dark;
     box-shadow: none;
   }
+  &:active:focus, &.active:focus {
+    background: $krug-red;
+    color: #fff;
+    border-color: $krug-red-darker;
+  }
 }
 
 .open > .dropdown-toggle.btn-primary {
   background: #fff;
+}
+@media (min-width: 768px) {
+  .vertical-align {
+    display: flex;
+    align-items: center;
+  }
 }

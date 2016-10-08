@@ -3,19 +3,19 @@
     .container
       .row
         .col-sm-6.col-md-4
-          = link_to 'http://berlincodeofconduct.org/', class: 'hvr-grow' do
+          = link_to 'http://berlincodeofconduct.org/', class: 'grow' do
             = image_tag 'ilu_attendees.svg', class: 'img-responsive center-block'
             .caption.text-center
               %h3 Rules for attendees
 
         .col-sm-6.col-md-4
-          = link_to for_speakers_url, class: 'hvr-grow' do
+          = link_to for_speakers_url, class: 'grow' do
             = image_tag 'ilu_lecturers.svg', class: 'img-responsive center-block'
             .caption.text-center
               %h3 Rules and resources for lecturers
 
         .col-sm-6.col-md-4
-          = link_to for_sponsors_url, class: 'hvr-grow' do
+          = link_to for_sponsors_url, class: 'grow' do
             = image_tag 'ilu_sponsoring.svg', class: 'img-responsive center-block'
             .caption.text-center
               %h3 Sponsoring rules
@@ -55,8 +55,8 @@
         .row
           %ul.list-inline.col-md-12.sponsors-list
             - @sponsors.each do |sponsor|
-              %li.col-sm-3
+              %li.col-sm-3.col-xs-6
                 = link_to sponsor.url, target: '_blank' do
-                  = image_tag sponsor.logo, class: 'center-block logo hvr-rotate'
+                  = image_tag sponsor.logo, class: 'grow center-block logo'
 
             %li.sponsor-logo= link_to 'SPONSOR US', for_sponsors_path, class: 'btn btn-primary sponsor-us'

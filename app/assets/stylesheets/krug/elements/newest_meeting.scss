@@ -3,8 +3,7 @@
 #newest_meeting {
   color: $invert-text-color;
   background-image: image-url('bg_nextmeet.png');
-  height: 230px;
-
+  background-size: cover;
   .button-image{
     background: image-url('bt_nextmeet.svg') no-repeat center center;
     margin-top: -15px;
@@ -13,6 +12,16 @@
     .btn{
       position: relative;
       top: 140px;
+    }
+  }
+  .meetup-link {
+    color: $invert-text-color;
+    font-size: 1.15em;
+    text-decoration: underline;
+    top: 140px;
+    position: relative;
+    &:hover, &:focus, &:active {
+      color: $krug-green-darker;
     }
   }
 }
