@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 ActiveAdmin.register Sponsor do
   config.filters = false
 
@@ -13,7 +14,7 @@ ActiveAdmin.register Sponsor do
     column :url
     column :description
     column :logo do |sponsor|
-      image_tag sponsor.logo
+      image_tag sponsor.logo.thumb.url
     end
     actions
   end
@@ -25,17 +26,20 @@ ActiveAdmin.register Sponsor do
         link_to sponsor.url
       end
       row :description
-      row :logo
+      row :logo do
+        image_tag sponsor.logo.thumb.url
+      end
     end
   end
 
   form do |f|
     f.inputs 'Sponsor Details' do
       f.input :name
-      f.input :logo
+      f.input :logo, as: :file, hint: image_tag(f.object.logo.thumb.url)
       f.input :url
       f.input :description
     end
     f.actions
   end
 end
+# rubocop:enable Metrics/BlockLength

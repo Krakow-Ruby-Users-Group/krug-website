@@ -57,6 +57,6 @@
             - @sponsors.each do |sponsor|
               %li.col-sm-3.col-xs-6
                 = link_to sponsor.url, target: '_blank' do
-                  = image_tag sponsor.logo, class: 'grow center-block logo'
+                  = image_tag sponsor.logo.thumb.url, class: 'grow center-block'
 
             %li.sponsor-logo= link_to 'SPONSOR US', for_sponsors_path, class: 'btn btn-primary sponsor-us'

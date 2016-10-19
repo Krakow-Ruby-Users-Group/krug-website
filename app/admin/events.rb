@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 ActiveAdmin.register Event do
   config.filters = false
 
@@ -61,3 +62,4 @@ ActiveAdmin.register Event do
     redirect_to collection_path, notice: 'Events imported successfully!'
   end
 end
+# rubocop:enable Metrics/BlockLength
