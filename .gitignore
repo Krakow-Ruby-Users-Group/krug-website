@@ -14,10 +14,13 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-/public/*
 !/log/.keep
 !/tmp/.keep
 
-/config/settings.yml
+# documentation
+.yardoc
+doc
+
 /config/secrets.yml
 /config/database.yml
+/public/*

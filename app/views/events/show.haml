@@ -2,13 +2,13 @@
   .container
     .row
       .col-md-8
-        %h2.section-heading=@event.name
+        %h2.section-heading= @event.name
         .small= @event.time.strftime('%d.%m.%Y')
         .small= @event.venue
         .meetup-description
           = @event.description&.html_safe
       .col-md-4
         %h2.section-heading OTHER MEETINGS
-        - @events.last(5).each do |event|
+        - @previous_events.each do |event|
           .other-meetups.col-md-8.col-offset-4
             = link_to event.name, event_path(event)

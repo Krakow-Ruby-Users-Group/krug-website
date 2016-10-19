@@ -3,7 +3,7 @@
     .row.vertical-align
       .col-sm-6
         %h2.section-heading= newest_meeting_header(@newest_meeting)
-        %p.lead= "#{@newest_meeting.time.strftime('%d.%m.%Y')} @ #{@newest_meeting.venue}"
+        %p.lead #{@newest_meeting.time.strftime('%d.%m.%Y')} @ #{@newest_meeting.venue}
         %p.lead= @newest_meeting.name
       .col-sm-6.text-center
         .button-image.center-block

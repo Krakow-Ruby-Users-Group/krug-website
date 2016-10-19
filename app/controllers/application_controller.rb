@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # Returns the newest events which we need in global scope
   def newest_meeting
     @newest_meeting = Event.last
   end
