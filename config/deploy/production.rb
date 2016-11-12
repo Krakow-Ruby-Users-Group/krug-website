@@ -13,7 +13,3 @@ set :linked_dirs, %w{
   .bundle
   bundle
 }
-
-namespace :deploy do
-  after :finished, 'app:fix_assets'
-end
