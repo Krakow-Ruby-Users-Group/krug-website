@@ -1,7 +1,6 @@
-set :application, 'rug'
+set :application, 'krug'
 set :repo_url, 'git@github.com:gajewsky/krug-website.git'
-
-set :deploy_to, '/home/deploy/rug'
+set :deploy_to, '/home/mensfeld/rails/krug'
 
 set :linked_files, %w{config/database.yml config/secrets.yml config/settings.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

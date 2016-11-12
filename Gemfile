@@ -6,7 +6,6 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg'
 gem 'settingslogic'
 gem 'httparty'
-gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-sass-extras'
@@ -26,10 +25,13 @@ gem 'validates_formatting_of'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
 
-group :development, :test do
-  gem 'polishgeeks-dev-tools'
+group :development do
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm', require: false, git: 'https://github.com/capistrano/rvm'
+  gem 'listen', '~> 3.0.5'
 end
 
-group :development do
-  gem 'listen', '~> 3.0.5'
+group :development, :test do
+  gem 'polishgeeks-dev-tools'
 end
