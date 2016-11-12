@@ -3,6 +3,12 @@
     .row.vertical-align
       .col-sm-6
         %h2.section-heading CONTACT
-        %p.lead The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism.
+        %p.lead
+          Would you like to share your concepts or dillemas on one of our KRUG events? Or maybe you are up for sponsoring one them? If your answer is yes to any of the two questions, drop us a message at
+          = succeed '.' do
+            %a{ href: 'mailto:contact@krug.org.pl' }<
+              contact@krug.org.pl
+
+
       .col-sm-6
         = render partial: 'elements/social'
