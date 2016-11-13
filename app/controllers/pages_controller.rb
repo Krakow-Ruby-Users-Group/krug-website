@@ -2,6 +2,6 @@
 class PagesController < ApplicationController
   # Setup and trigger landing page
   def index
-    @sponsors = Sponsor.all
+    @sponsors = Sponsor.sorted
   end
 end
