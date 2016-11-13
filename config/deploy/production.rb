@@ -5,11 +5,3 @@ set :linked_files, %w{
   config/secrets.yml
   config/database.yml
 }
-
-set :linked_dirs, %w{
-  log
-  tmp
-  public/assets
-  .bundle
-  bundle
-}
