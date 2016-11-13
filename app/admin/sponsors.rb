@@ -35,7 +35,7 @@ ActiveAdmin.register Sponsor do
   form do |f|
     f.inputs 'Sponsor Details' do
       f.input :name
-      f.input :logo, as: :file, hint: image_tag(f.object.logo.thumb.url)
+      f.input :logo, as: :file #, hint: image_tag(f.object.logo.thumb.url)
       f.input :url
       f.input :description
     end
