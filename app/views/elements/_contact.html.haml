@@ -1,14 +1,12 @@
 %section#contact
   .container
     .row.vertical-align
-      .col-sm-6
+      .col-sm-5
         %h2.section-heading CONTACT
         %p.lead
           Would you like to share your concepts or dillemas on one of our KRUG events? Or maybe you are up for sponsoring one them? If your answer is yes to any of the two questions, drop us a message at
           = succeed '.' do
-            %a{ href: 'mailto:contact@krug.org.pl' }<
-              contact@krug.org.pl
+            = mail_to 'contact@krug.org.pl'
 
-
-      .col-sm-6
+      .col-sm-7
         = render partial: 'elements/social'
