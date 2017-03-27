@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.order('created_at DESC').page(params[:page])
+    @sponsors = Sponsor.includes(:offers).sorted
   end
 
   def show

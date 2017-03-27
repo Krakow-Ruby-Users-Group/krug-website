@@ -16,6 +16,13 @@ ActiveAdmin.register Sponsor do
     column :logo do |sponsor|
       image_tag sponsor.logo.thumb.url
     end
+
+    column :job_offers do |sponsor|
+      ul do
+        li link_to sponsor.offers.count, admin_sponsor_offers_path(sponsor)
+      end
+    end
+
     actions
   end
 
@@ -29,6 +36,12 @@ ActiveAdmin.register Sponsor do
       row :logo do
         image_tag sponsor.logo.thumb.url
       end
+
+      row :job_offers do |sponsor|
+        ul do
+          li link_to sponsor.offers.count, admin_sponsor_offers_path(sponsor)
+        end
+      end
     end
   end
 
@@ -39,6 +52,7 @@ ActiveAdmin.register Sponsor do
       f.input :url
       f.input :description
     end
+
     f.actions
   end
 end
