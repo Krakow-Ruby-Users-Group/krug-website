@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'for_speakers' => 'pages#for_speakers', path: 'for-speakers'
 
   resources :events, only: %i( show index )
+  resources :offers, only: %i( show index )
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
