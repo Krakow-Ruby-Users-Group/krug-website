@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920184806) do
+ActiveRecord::Schema.define(version: 20170327202412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,22 +46,6 @@ ActiveRecord::Schema.define(version: 20160920184806) do
     t.datetime "updated_at"
   end
 
-  create_table "ckeditor_assets", force: :cascade do |t|
-    t.string   "data_file_name",               null: false
-    t.string   "data_content_type"
-    t.integer  "data_file_size"
-    t.string   "data_fingerprint"
-    t.integer  "assetable_id"
-    t.string   "assetable_type",    limit: 30
-    t.string   "type",              limit: 30
-    t.integer  "width"
-    t.integer  "height"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.index ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
-    t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
-  end
-
   create_table "events", force: :cascade do |t|
     t.string   "meetup_id"
     t.string   "name"
@@ -76,6 +60,15 @@ ActiveRecord::Schema.define(version: 20160920184806) do
     t.string   "venue"
   end
 
+  create_table "offers", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "sponsor_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["sponsor_id"], name: "index_offers_on_sponsor_id", using: :btree
+  end
+
   create_table "sponsors", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
@@ -85,4 +78,5 @@ ActiveRecord::Schema.define(version: 20160920184806) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "offers", "sponsors"
 end
