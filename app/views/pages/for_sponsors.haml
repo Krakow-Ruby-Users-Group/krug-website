@@ -1,42 +1,43 @@
 %section#for-sponsors
   .container
     .row
-      %h1
-        For sponsors
+      .col-xs-12
+        %h2.section-heading For sponsors
 
-      %p.lead
-        If you are interested in sponsoring KRUG, please send your offer via email at
-        = succeed '.' do
-          %a{ href: 'mailto:contact@krug.org.pl' }<
-            contact@krug.org.pl
+        %p.lead
+          If you are interested in sponsoring KRUG, please send your offer via email at
+          = succeed '.' do
+            %a{ href: 'mailto:contact@krug.org.pl' }<
+              contact@krug.org.pl
 
-
-      %ul.lead
-        %li
-          Make sure to include basic details of your company (name, profile, short description).
-        %li
-          Your offer is a subject to organizers' decisions.
-        %li
-          If it is accepted, it does not always mean, you are the sponsor of the upcoming event.
-        %li
-          We usually select our sponsor 1-3 months ahead.
-        %li
-          We will inform you about the available dates and options with due notice.
-        %li
-          As a sponsor, you have right to disseminate advertising gadgets during the KRUG event (stickers, mugs etc.).
-        %li
-          The aforementioned materials can be displayed only in the place designated by organizers.
-        %li
-          Costs that you commit to bear can differ by 15% as to what is agreed.
-        %li
-          If your withdraw your sponsorship after it is agreed, it means you will not be allowed to sponsor KRUG again.
-        %li
-          If your sponsorship gets approval, you will be informed about the event date 7 days before its official announcement.
-        %li
-          You are allowed to request moving the event by one week, if it collides with your other activities.
-        %li
-          You are obliged to send a representative to the KRUG event in person.
-        %li
-          You are entitled to designate 10 people from your company to take part in the event independent of the tickets availability.
+    .row
+      .col-xs-12
+        %ul
+          %li
+            Make sure to include basic details of your company (name, profile, short description).
+          %li
+            Your offer is a subject to organizers' decisions.
+          %li
+            If it is accepted, it does not always mean, you are the sponsor of the upcoming event.
+          %li
+            We usually select our sponsor 1-3 months ahead.
+          %li
+            We will inform you about the available dates and options with due notice.
+          %li
+            As a sponsor, you have right to disseminate advertising gadgets during the KRUG event (stickers, mugs etc.).
+          %li
+            The aforementioned materials can be displayed only in the place designated by organizers.
+          %li
+            Costs that you commit to bear can differ by 15% as to what is agreed.
+          %li
+            If your withdraw your sponsorship after it is agreed, it means you will not be allowed to sponsor KRUG again.
+          %li
+            If your sponsorship gets approval, you will be informed about the event date 7 days before its official announcement.
+          %li
+            You are allowed to request moving the event by one week, if it collides with your other activities.
+          %li
+            You are obliged to send a representative to the KRUG event in person.
+          %li
+            You are entitled to designate 10 people from your company to take part in the event independent of the tickets availability.
 
 = render partial: 'elements/code_of_conduct'

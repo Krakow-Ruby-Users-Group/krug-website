@@ -1,29 +1,31 @@
 %section#for-speakers
   .container
     .row
-      %h1 For speakers
+      .col-xs-12
+        %h2.section-heading For speakers
 
-      %p.lead
-        If you are interested in having a presentation at KRUG meetup, please send your application via email at
-        = succeed '.' do
-          %a{ href: 'mailto:contact@krug.org.pl' }<
-            contact@krug.org.pl
+        %p.lead
+          If you are interested in having a presentation at KRUG meetup, please send your application via email at
+          = succeed '.' do
+            %a{ href: 'mailto:contact@krug.org.pl' }<
+              contact@krug.org.pl
 
-
-      %ul.lead
-        %li
-          When you prepare your presentation, be ready to deliver it in the 20 to 45 minutes timeframe (except of lightning talks).
-        %li
-          Make sure it shows how much is left; you can use a progress bar to illustrate it.
-        %li
-          The submission deadline for the subject is 14 days before the event.
-        %li
-          You can prepare and deliver your presentation either in Polish or English.
-        %li
-          The subject is approved by the ogranizers up to 3 days from submission.
-        %li
-          You  are entitled to 1 commercial/advertising slide at the maximum (except of Sponsor).
-        %li
-          You are obliged to inform organizers, if that you are have presented or are going to present the same presentation at another event. Let us know about the event details and date.
+    .row
+      .col-xs-12
+        %ul
+          %li
+            When you prepare your presentation, be ready to deliver it in the 20 to 45 minutes timeframe (except of lightning talks).
+          %li
+            Make sure it shows how much is left; you can use a progress bar to illustrate it.
+          %li
+            The submission deadline for the subject is 14 days before the event.
+          %li
+            You can prepare and deliver your presentation either in Polish or English.
+          %li
+            The subject is approved by the ogranizers up to 3 days from submission.
+          %li
+            You  are entitled to 1 commercial/advertising slide at the maximum (except of Sponsor).
+          %li
+            You are obliged to inform organizers, if that you are have presented or are going to present the same presentation at another event. Let us know about the event details and date.
 
 = render partial: 'elements/code_of_conduct'
