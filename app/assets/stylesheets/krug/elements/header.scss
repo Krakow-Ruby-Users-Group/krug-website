@@ -13,7 +13,7 @@ header {
     width: 100%;
     .layer-1 {
       .rb1 { @include rotate(15deg); height: 79px;top: 18px;left: 3px;}
-      .rb2 { @include rotate(-20deg); height: 52px;right: 39px;top: 35px;}
+      .rb2 { @include rotate(-20deg); height: 52px;right: 39px;top: 44px;}
       .rb3 { @include rotate(228deg); height: 18px;right: 46px;top: 145px;}
       .rb4 { @include rotate(-204deg); height: 18px; left: 9px;top: 173px;}
     }
@@ -25,7 +25,7 @@ header {
 
     }
     .layer-3 {
-      .rb1 { @include rotate(-4deg); height: 8px;right: 21px;top: 13px;}
+      .rb1 { @include rotate(-4deg); height: 8px;right: 21px;top: 70px;}
       .rb2 { @include rotate(212deg); height: 16px;left: 80px;top: 91px;}
     }
   }
@@ -38,10 +38,8 @@ header {
     width: 280px;
   }
   .social-list {
-    position: relative;
-    top: -5px;
     text-align: center;
-    .social-icon{
+    .social-icon {
       display: inline-block;
       position: relative;
       width: 36px;

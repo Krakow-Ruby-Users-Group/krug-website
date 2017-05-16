@@ -25,13 +25,13 @@
       .row
         .col-lg-12.text-left
           %h2.section-heading SPONSORS
-        .row
-          %ul.list-inline.col-md-12.sponsors-list
+        .col-md-12
+          %ul.list-inline.sponsors-list
             - @sponsors.each do |sponsor|
-              %li.col-sm-3.col-xs-6
+              %li.col-sm-3.col-xs-6.logo
                 = link_to sponsor.url, target: '_blank' do
-                  = image_tag sponsor.logo.thumb.url, class: 'grow center-block'
-
-            %li.sponsor-logo= link_to 'SPONSOR US', for_sponsors_path, class: 'btn btn-primary sponsor-us'
+                  = image_tag sponsor.logo.thumb.url, class: 'center-block'
+        .sponsor-us.col-md-12.text-center
+          = link_to 'SPONSOR US', for_sponsors_path, class: 'btn btn-primary'
 
 = render partial: 'elements/code_of_conduct'
