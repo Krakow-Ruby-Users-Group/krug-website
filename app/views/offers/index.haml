@@ -1,13 +1,9 @@
 %section#offer-index
   .container
     .row
-      .col-lg-12
-        %ul.timeline
-          - @sponsors.each_with_index do |sponsor, index|
-            %li
-              %h4.subheading= sponsor.name
-              - sponsor.offers.each do |offer|
-                %h4= link_to offer.title, offer_path(offer)
-
-    .row
-      .col-xs-offset-1.col-xs-10.col-sm-offset-4.col-sm-4
+      - @offers.each_with_index do |offer, index|
+        .col-xs-12.col-md-4
+          = link_to offer_path(offer), class: 'grow center-block' do
+            = image_tag offer.sponsor.logo.thumb.url, class: 'img-responsive center-block'
+            .caption.text-center
+              %h3=offer.title

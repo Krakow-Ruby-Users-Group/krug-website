@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   def index
-    @sponsors = Sponsor.includes(:offers).sorted
+    @offers = Offer.includes(:sponsor).sorted
   end
 
   def show
