@@ -39,6 +39,7 @@ header {
   }
   .social-list {
     text-align: center;
+    display: none;
     .social-icon {
       display: inline-block;
       position: relative;
@@ -53,6 +54,7 @@ header {
     }
   }
 
+
   @media (min-width: 768px) {
     #rubins { display: block; }
     .navbar-nav > li > a {
@@ -60,6 +62,9 @@ header {
       transition: all 0.4s;
       padding-top: 35px;
       padding-bottom: 20px;
+    }
+    .social-list {
+      display: block;
     }
   }
 }
