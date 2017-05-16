@@ -2,12 +2,20 @@
 
 #contact {
   .social-list {
-    .social-icon{
+    .social-icon {
       display: inline-block;
       position: relative;
-      width: 80px;
+      width: 40px;
       vertical-align: middle;
       overflow: hidden;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .social-list {
+      .social-icon {
+        width: 66px;
+      }
     }
   }
 }

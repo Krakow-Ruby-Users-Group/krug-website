@@ -1,6 +1,7 @@
 @import "bootstrap_configuration";
 
 #event-index {
+  padding-top: 50px;
   .timeline {
     list-style: none;
     padding: 0;
@@ -91,6 +92,13 @@
         margin-bottom: 0;
       }
     }
+  }
+  .pagination {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
   }
 
   @media (min-width: 768px) {

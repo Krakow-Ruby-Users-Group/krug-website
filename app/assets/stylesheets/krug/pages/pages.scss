@@ -1,0 +1,17 @@
+#for-speakers, #for-sponsors {
+  margin: 20px 0 25px 0;
+
+  ul {
+    margin-left: -40px;
+    li {
+      font-size: 16px;
+      margin: 0;
+      padding: 20px 0 20px 39px;
+      list-style: none;
+      background-image: image-url('ruby.svg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 20px;
+    }
+  }
+}
