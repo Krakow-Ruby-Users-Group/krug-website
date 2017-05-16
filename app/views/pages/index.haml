@@ -20,33 +20,6 @@
             .caption.text-center
               %h3 Rules for sponsors
 
-  %section#organizers.hidden
-    .container
-      .row
-        .col-lg-12.text-left
-          %h2.section-heading ORGANIZERS
-      .row
-        .col-sm-4
-          .team-member
-            =# image_tag 'http://lorempicsum.com/simpsons/200/200/1', class: 'img-responsive img-circle center-block'
-            .caption.text-center
-              %h3 Sebastian B
-              %p.text-muted Lorem ipsum dolor
-
-        .col-sm-4
-          .team-member
-            =# image_tag 'http://lorempicsum.com/simpsons/200/200/2', class: 'img-responsive img-circle center-block'
-            .caption.text-center
-              %h3 Maciej Mensfeld
-              %p.text-muted Lorem ipsum dolor
-
-        .col-sm-4
-          .team-member
-            =# image_tag 'http://lorempicsum.com/simpsons/200/200/4', class: 'img-responsive img-circle center-block'
-            .caption.text-center
-              %h3 Krzysztof H
-              %p.text-muted Lorem ipsum dolor
-
   %section#sponsors
     .container
       .row
@@ -60,3 +33,5 @@
                   = image_tag sponsor.logo.thumb.url, class: 'grow center-block'
 
             %li.sponsor-logo= link_to 'SPONSOR US', for_sponsors_path, class: 'btn btn-primary sponsor-us'
+
+= render partial: 'elements/code_of_conduct'
