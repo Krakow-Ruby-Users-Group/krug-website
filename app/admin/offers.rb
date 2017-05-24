@@ -13,15 +13,12 @@ ActiveAdmin.register Offer do
     selectable_column
     id_column
     column :title
-    column :description
     actions
   end
 
   show do
     attributes_table do
       row :title
-      row :description
-      row :created
     end
     div do
       simple_format offer.description&.html_safe
@@ -31,10 +28,11 @@ ActiveAdmin.register Offer do
   form do |f|
     f.inputs class: 'attributes_table col-md-10' do
       f.input :title
-      div do
-        f.label :description
-        f.bootsy_area :description
-      end
+      f.input :description
+      # li do
+      #   f.label :description
+      #   f.bootsy_area :description
+      # end
     end
     f.actions
   end

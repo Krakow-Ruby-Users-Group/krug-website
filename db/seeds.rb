@@ -31,13 +31,6 @@ Sponsor.create!(
 )
 
 Sponsor.create!(
-  name: 'Polcode',
-  url: 'http://www.polcode.com/',
-  remote_logo_url: 'http://photos3.meetupstatic.com/photos/sponsor/2/e/8/2/iab120x90_2591906.jpeg',
-  description: 'Beer, other drinks, sweets'
-)
-
-Sponsor.create!(
   name: 'AKRA Polska',
   url: 'http://akra.net/',
   remote_logo_url: 'http://akra.net/uploads/images/akra-logo.png',
@@ -57,3 +50,11 @@ Sponsor.create!(
   remote_logo_url: 'http://photos2.meetupstatic.com/photos/sponsor/7/7/2/6/iab120x90_2070502.jpeg',
   description: 'Beer, other drinks, sweets'
 )
+
+10.times do
+  Offer.create!(
+    title: "#{Faker::Hacker.adjective} #{Faker::Hacker.adjective}",
+    sponsor_id: Sponsor.pluck(:id).sample,
+    description: Faker::Hacker.say_something_smart
+  )
+end

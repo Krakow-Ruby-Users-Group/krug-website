@@ -1,0 +1,17 @@
+@import "bootstrap_configuration";
+
+#offer-index {
+  margin: 50px 0;
+  .offer-list {
+    .offer-card {
+      text-align: center;
+      margin: 20px 0px;
+      padding: 0px 25px;
+      .logo {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+        margin-bottom: 20px;
+        height: 100px;
+      }
+    }
+  }
+}
