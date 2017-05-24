@@ -5,30 +5,24 @@ class EventsService
   # KRUG name on meetup
   URLNAME = 'Krakow-Ruby-Users-Group'.freeze
 
+  attr_reader :options
+
+  def initialize(all: false)
+    status = all ? 'past,upcoming' : 'upcoming'
+    @options = { query: { status: status } }
+  end
+
   # Triggers meetup events import
   def call
-    events.each { |event| import_event(event) }
+    Event.create(raw_events)
+    Event.order('created_at DESC')
   end
 
   private
 
-  # Creates new event and save it to database unless it already exists
-  # @param hash [Hash]
-  def import_event(hash)
-    event = event_hash(hash)
-    return if Event.find_by(meetup_id: event[:meetup_id])
-    Event.create(event)
-  end
-
   # Makes remote call for meetup.com api and returns KRUG events
-  def events
-    self.class.get("/#{URLNAME}/events/", options)
-  end
-
-  # Prepares options needed for events call
-  # @return [Hash]
-  def options
-    { query: { status: 'past,upcoming' } }
+  def raw_events
+    self.class.get("/#{URLNAME}/events/", options).map{ |hash| event_hash(hash) }
   end
 
   # Prepares hash for single event

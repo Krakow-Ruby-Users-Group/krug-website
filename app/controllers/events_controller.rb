@@ -1,7 +1,9 @@
 # Events controller
 class EventsController < ApplicationController
+  caches_action :index, expires_in: 3.hours
+
   def index
-    @events = Event.order('created_at DESC').page(params[:page])
+    @events = EventsService.new.call.page(params[ :page])
   end
 
   def show

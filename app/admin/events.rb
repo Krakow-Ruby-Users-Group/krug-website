@@ -58,7 +58,7 @@ ActiveAdmin.register Event do
   end
 
   collection_action :event_import, method: :get do
-    EventsService.new.call
+    EventsService.new(all: true).call
     redirect_to collection_path, notice: 'Events imported successfully!'
   end
 end
