@@ -39,6 +39,17 @@ section {
   font-family: 'ADAM-CGPRO';
 }
 
+/*Lists*/
+ul.ruby-list {
+  li {
+    list-style: none;
+    background-image: image-url('ruby.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+  }
+}
+
 /*Buttons*/
 
 .btn {

@@ -19,19 +19,6 @@
             = image_tag 'ilu_sponsoring.svg', class: 'img-responsive center-block'
             .caption.text-center
               %h3 Rules for sponsors
-
-  %section#sponsors
-    .container
-      .row
-        .col-lg-12.text-left
-          %h2.section-heading SPONSORS
-        .col-md-12
-          %ul.list-inline.sponsors-list
-            - @sponsors.each do |sponsor|
-              %li.col-sm-3.col-xs-6.logo
-                = link_to sponsor.url, target: '_blank' do
-                  = image_tag sponsor.logo.thumb.url, class: 'center-block'
-        .sponsor-us.col-md-12.text-center
-          = link_to 'SPONSOR US', for_sponsors_path, class: 'btn btn-primary'
+  = render partial: 'elements/sponsors_list'
 
 = render partial: 'elements/code_of_conduct'
