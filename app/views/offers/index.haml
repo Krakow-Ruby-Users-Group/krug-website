@@ -1,0 +1,19 @@
+%section#offer-index
+  .container
+    .row
+      .offer-list
+        - @offers.each_with_index do |offer, index|
+          .col-xs-12.col-sm-6.col-md-4.offer-card.grow
+            .logo.col-xs-12
+              = image_tag offer.sponsor.logo.thumb.url, class: 'img-responsive center-block'
+
+            .text-center
+              %h4.section-heading=offer.title.upcase
+              %h5= link_to 'read more', offer_path(offer)
+
+        .col-xs-12.col-sm-6.col-md-4.offer-card.grow
+          .logo.col-xs-12
+            %h2.section-heading.krug-red YOUR COMPANY HERE?
+          .text-center
+            %h4.section-heading.krug-red BECOME OUR SPONSOR
+            %h5= link_to 'read more', for_sponsors_path

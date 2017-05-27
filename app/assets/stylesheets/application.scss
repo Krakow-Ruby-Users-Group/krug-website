@@ -39,6 +39,17 @@ section {
   font-family: 'ADAM-CGPRO';
 }
 
+/*Lists*/
+ul.ruby-list {
+  li {
+    list-style: none;
+    background-image: image-url('ruby.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+  }
+}
+
 /*Buttons*/
 
 .btn {
@@ -78,6 +89,17 @@ section {
 
 .lead {
   font-size: 18px;
+}
+
+.logo {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.krug-red {
+  color: $krug-red
 }
 
 @media (min-width: 768px) {

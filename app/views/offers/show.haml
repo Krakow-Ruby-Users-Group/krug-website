@@ -1,0 +1,7 @@
+%section#offer-show
+  .container
+    .row
+      .col-md-10
+        %h2.section-heading= @offer.title
+        .meetup-description
+          = @offer.description&.html_safe

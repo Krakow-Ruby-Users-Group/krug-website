@@ -24,6 +24,7 @@ gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
+gem 'actionpack-action_caching'
 
 group :development do
   gem 'capistrano-rails', require: false
