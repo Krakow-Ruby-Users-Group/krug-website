@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pg'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '~> 5.1.1'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 5.0'
 gem 'settingslogic'

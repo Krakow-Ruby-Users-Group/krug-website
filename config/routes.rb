@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   root 'pages#index'
   get 'pages/index' => 'pages#index'
-  get 'for_sponsors' => 'pages#for_sponsors', path: 'for-sponsors'
-  get 'for_speakers' => 'pages#for_speakers', path: 'for-speakers'
+  get 'for-sponsors' => 'pages#for_sponsors'
+  get 'for-speakers' => 'pages#for_speakers'
 
   resources :events, only: %i( show index )
   resources :offers, only: %i( show index )
