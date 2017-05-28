@@ -2,13 +2,13 @@
   .container
     .row
       .offer-list
-        - @offers.each_with_index do |offer, index|
+        - @offers.each_with_index do |offer|
           .col-xs-12.col-sm-6.col-md-4.offer-card.grow
             .logo.col-xs-12
               = image_tag offer.sponsor.logo.thumb.url, class: 'img-responsive center-block'
 
             .text-center
-              %h4.section-heading=offer.title.upcase
+              %h4.section-heading= offer.title.upcase
               %h5= link_to 'read more', offer_path(offer)
 
         .col-xs-12.col-sm-6.col-md-4.offer-card.grow

@@ -2,33 +2,32 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'pg'
-gem 'settingslogic'
-gem 'httparty'
-gem 'sass-rails', '~> 5.0'
+gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin_addons'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-sass-extras'
 gem 'bootsy', github: 'volmer/bootsy'
-gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-gem 'haml-rails'
-gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
 gem 'devise', github: 'plataformatec/devise'
+gem 'haml-rails'
+gem 'httparty'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-gem 'activeadmin', github: 'activeadmin'
-gem 'activeadmin_addons'
-gem 'tzinfo-data'
-gem 'validates_formatting_of'
+gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'kaminari'
+gem 'pg'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'rails_12factor', group: :production
-gem 'actionpack-action_caching'
+gem 'sass-rails', '~> 5.0'
+gem 'settingslogic'
+gem 'turbolinks', '~> 5'
+gem 'tzinfo-data'
+gem 'uglifier', '>= 1.3.0'
+gem 'validates_formatting_of'
 
 group :development do
-  gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
   gem 'capistrano-rvm', require: false, git: 'https://github.com/capistrano/rvm'
   gem 'listen', '~> 3.0.5'
 end

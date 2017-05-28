@@ -1,9 +1,7 @@
 # Events controller
 class EventsController < ApplicationController
-  caches_action :index, expires_in: 3.hours
-
   def index
-    @events = EventsService.new.call.page(params[ :page])
+    @events = events.page(params[:page])
   end
 
   def show
@@ -12,6 +10,12 @@ class EventsController < ApplicationController
   end
 
   private
+
+  def events
+    Rails.cache.fetch('meetup_events', expires_in: 3.hours) do
+      EventsService.new.call
+    end
+  end
 
   # Returns 3 previous events ids
   def previous_events_ids
