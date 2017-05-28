@@ -22,7 +22,7 @@ class EventsService
 
   # Makes remote call for meetup.com api and returns KRUG events
   def raw_events
-    self.class.get("/#{URLNAME}/events/", options).map{ |hash| event_hash(hash) }
+    self.class.get("/#{URLNAME}/events/", options).map { |hash| event_hash(hash) }
   end
 
   # Prepares hash for single event

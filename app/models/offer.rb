@@ -1,7 +1,6 @@
+# Model representing single sponsor's job offer
 class Offer < ApplicationRecord
   belongs_to :sponsor
-
-  paginates_per 8
 
   scope :sorted, -> { order(created_at: :desc) }
 
