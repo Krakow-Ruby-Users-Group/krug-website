@@ -20,8 +20,8 @@ ActiveAdmin.register Offer do
     attributes_table do
       row :title
     end
-    div do
-      simple_format offer.description&.html_safe
+    div class: 'col-md-8' do
+      markdown(offer.description)
     end
   end
 
@@ -29,12 +29,12 @@ ActiveAdmin.register Offer do
     f.inputs class: 'attributes_table col-md-10' do
       f.input :title
       f.input :description
-      # li do
-      #   f.label :description
-      #   f.bootsy_area :description
-      # end
     end
+
     f.actions
+    div do
+      link_to 'Styling with Markdown is supported', 'https://guides.github.com/features/mastering-markdown/', target: '_blank'
+    end
   end
 end
 # rubocop:enable Metrics/BlockLength

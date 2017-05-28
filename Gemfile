@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-sass-extras'
@@ -18,6 +18,7 @@ gem 'kaminari'
 gem 'pg'
 gem 'rails', '~> 5.1.1'
 gem 'rails_12factor', group: :production
+gem 'redcarpet'
 gem 'sass-rails', '~> 5.0'
 gem 'settingslogic'
 gem 'turbolinks', '~> 5'
