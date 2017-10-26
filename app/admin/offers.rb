@@ -33,7 +33,8 @@ ActiveAdmin.register Offer do
 
     f.actions
     div do
-      link_to 'Styling with Markdown is supported', 'https://guides.github.com/features/mastering-markdown/', target: '_blank'
+      link_to 'Styling with Markdown is supported',
+        'https://guides.github.com/features/mastering-markdown/', target: '_blank'
     end
   end
 end

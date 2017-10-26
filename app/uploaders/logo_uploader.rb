@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 # This class is responsible for uploading images needed used as sponsor's logo
 class LogoUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick

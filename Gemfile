@@ -6,7 +6,7 @@ gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-sass-extras'
-gem 'bootsy', github: 'volmer/bootsy'
+gem 'bootsy'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'haml-rails'
@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pg'
-gem 'rails', '~> 5.1.1'
+gem 'rails', '~> 5.1.4'
 gem 'rails_12factor', group: :production
 gem 'redcarpet'
 gem 'sass-rails', '~> 5.0'
@@ -34,5 +34,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'polishgeeks-dev-tools'
+  gem 'pry-rails'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
