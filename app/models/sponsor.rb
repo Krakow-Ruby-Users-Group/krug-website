@@ -5,4 +5,8 @@ class Sponsor < ApplicationRecord
   has_many :offers
 
   scope :sorted, -> { order(created_at: :desc) }
+
+  validates :logo, presence: true
+  validates :url, presence: true
+  validates :name, presence: true
 end
