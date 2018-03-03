@@ -22,6 +22,8 @@
 .yardoc
 doc
 
+
 /config/secrets.yml
 /config/database.yml
 /public/*
+/.gem/*

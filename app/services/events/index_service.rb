@@ -1,19 +1,21 @@
 module Events
-  # The service responsible for listing events from meetup api
   class IndexService
     def call
-      update_events_information
+      update_events_information!
+
       events
     end
 
     private
 
-    def update_events_information
-      Rails.cache.fetch('meetup_events', expires_in: 3.hours) do
-        raw_events = FetchRemoteService.new.call
+    def update_events_information!
+      return if raw_events.blank?
 
-        CreateService.new(raw_events).call
-      end
+      CreateService.new(raw_events).call
+    end
+
+    def raw_events
+      FetchRemoteService.new.call
     end
 
     def events

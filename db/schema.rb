@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 20170327202412) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "bootsy_image_galleries", id: :serial, force: :cascade do |t|
+    t.string "bootsy_resource_type"
+    t.integer "bootsy_resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bootsy_resource_type", "bootsy_resource_id"], name: "bootsy_image_galleries_index"
+  end
+
   create_table "bootsy_images", id: :serial, force: :cascade do |t|
     t.string "image_file"
     t.integer "image_gallery_id"
