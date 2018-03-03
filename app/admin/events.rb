@@ -58,7 +58,8 @@ ActiveAdmin.register Event do
   end
 
   collection_action :event_import, method: :get do
-    EventsService.new(all: true).call
+    raw_events = FetchRemoteService.new(page: 1000).call
+    CreateService.new(raw_events).call
     redirect_to collection_path, notice: 'Events imported successfully!'
   end
 end
