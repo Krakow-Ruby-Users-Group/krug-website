@@ -1,0 +1,44 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - .gemspec/**/*
+    - .bundle/**/*
+    - vendor/**/*
+    - config/**/*
+    - script/**/*
+    - !ruby/regexp /old_and_unused\.rb$/
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+    - '**/Gemfile'
+    - '**/Capfile'
+    - lib/tasks/**/*.rake
+    - lib/tasks/**/*.rb
+    - lib/capistrano/**/*.rb
+    - lib/capistrano/**/*.cap
+AlignParameters:
+  Enabled: false
+ClassLength:
+  CountComments: false
+  Max: 200
+LineLength:
+  Max: 99
+MethodLength:
+  CountComments: false
+  Max: 15
+Metrics/AbcSize:
+  Max: 25
+Lint/AmbiguousOperator:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+inherit_from:
+  - config/rubocop_rspec.yml
+  - config/rubocop_todo.yml

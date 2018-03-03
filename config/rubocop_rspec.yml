@@ -1,0 +1,6 @@
+RSpec/ExampleLength:
+  Max: 10
+RSpec/SubjectStub:
+  Enabled: false
+RSpec/MessageChain:
+  Enabled: false

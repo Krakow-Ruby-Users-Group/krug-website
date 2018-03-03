@@ -4,6 +4,9 @@ class Offer < ApplicationRecord
 
   scope :sorted, -> { order(created_at: :desc) }
 
+  validates :title, presence: true
+  validates :description, presence: true
+
   def to_param
     "#{id}-#{sponsor.name}-#{title}".parameterize
   end

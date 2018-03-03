@@ -53,12 +53,13 @@ ActiveAdmin.register Event do
     f.actions
   end
 
-  action_item only: :index do
+  action_item :index do
     link_to 'Import meetup events', action: :event_import
   end
 
   collection_action :event_import, method: :get do
-    EventsService.new(all: true).call
+    raw_events = Events::FetchRemoteService.new(page: 1000).call
+    Events::CreateService.new(raw_events).call
     redirect_to collection_path, notice: 'Events imported successfully!'
   end
 end

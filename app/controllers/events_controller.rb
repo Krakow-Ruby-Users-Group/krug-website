@@ -12,9 +12,7 @@ class EventsController < ApplicationController
   private
 
   def events
-    Rails.cache.fetch('meetup_events', expires_in: 3.hours) do
-      EventsService.new.call
-    end
+    Events::IndexService.new.call
   end
 
   # Returns 3 previous events ids

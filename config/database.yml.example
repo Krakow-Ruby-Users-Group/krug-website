@@ -14,5 +14,5 @@ test:
 production:
   <<: *default
   database: rug_production
-  username: mgajewski
-  password: password
+  username: postgres
+  password: 

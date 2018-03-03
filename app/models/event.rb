@@ -5,4 +5,6 @@ class Event < ApplicationRecord
   enum status: { past: 0, upcoming: 1 }
 
   paginates_per 8
+
+  scope :sorted, -> { order(time: :asc) }
 end
