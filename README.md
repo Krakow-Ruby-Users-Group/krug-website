@@ -1,5 +1,8 @@
-# KRUG Website
+[![Build Status](https://travis-ci.org/Krakow-Ruby-Users-Group/krug-website.svg?branch=master)](https://travis-ci.org/Krakow-Ruby-Users-Group/krug-website)
+
+# KRUG Website - http://krug.org.pl/
   Rails 5.0 website of Kraków Ruby Users Group
+
 
 ## Installation
 

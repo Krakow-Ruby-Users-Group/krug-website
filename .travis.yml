@@ -1,0 +1,14 @@
+anguage: ruby
+sudo: false
+rvm:
+  - 2.3.1
+before_install:
+  - cp config/database.yml.example config/database.yml
+install:
+  - bundle install
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+  - bundle exec rake db:test:prepare
+script:
+  - bundle exec rubocop
+  - bundle exec rspec spec
