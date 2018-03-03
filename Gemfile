@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pg'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.1.5'
 gem 'rails_12factor', group: :production
 gem 'redcarpet'
 gem 'sass-rails', '~> 5.0'
@@ -34,11 +34,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-rails'
   gem 'factory_bot_rails'
+  gem 'pry-rails'
+  gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rspec'
-  gem 'rspec-rails'
   gem 'vcr'
   gem 'webmock'
 end

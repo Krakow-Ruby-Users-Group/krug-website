@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 describe Events::AttributesService do
-  subject(:service) { Events::AttributesService.new(event) }
+  subject(:service) { described_class.new(event) }
+
   let(:fixture) { file_fixture('event.json').read }
   let(:event) { JSON.parse(fixture) }
 

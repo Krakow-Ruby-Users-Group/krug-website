@@ -6,5 +6,5 @@ class Event < ApplicationRecord
 
   paginates_per 8
 
-  scope :sorted, -> { order(time: :desc) }
+  scope :sorted, -> { order(time: :asc) }
 end
