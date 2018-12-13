@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
+gem 'rbnacl'
 gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'bootstrap-sass', '~> 3.3.6'
