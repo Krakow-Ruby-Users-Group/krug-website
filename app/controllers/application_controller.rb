@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
 
   # Returns the newest events which we need in global scope
   def newest_meeting
-    @newest_meeting = Event.sorted.last
+    @newest_meeting = Event.sorted.first
   end
 end
