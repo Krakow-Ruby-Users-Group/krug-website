@@ -8,6 +8,9 @@ class Offer < ApplicationRecord
   validates :description, presence: true
 
   def to_param
-    "#{id}-#{sponsor.name}-#{title}".parameterize
+    [id, sponsor&.name, title]
+      .compact
+      .join('-')
+      .parameterize
   end
 end
