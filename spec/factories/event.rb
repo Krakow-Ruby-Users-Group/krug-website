@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :event do
     sequence(:meetup_id, 10) { |n| "9986048#{n}" }

@@ -6,7 +6,7 @@
           .col-xs-12.col-sm-6.col-md-4.offer-card.grow
             = link_to offer_path(offer) do
               .logo.col-xs-12
-                = image_tag offer.sponsor.logo.thumb.url, class: 'img-responsive center-block'
+                = image_tag offer_logo_url(offer), class: 'img-responsive center-block'
 
               .text-center
                 %h4.section-heading= offer.title.upcase
