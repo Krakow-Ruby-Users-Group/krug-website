@@ -36,7 +36,7 @@ Lint/AmbiguousOperator:
   Enabled: false
 Style/Documentation:
   Enabled: false
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
 inherit_from:
