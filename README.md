@@ -21,3 +21,7 @@ bundle exec rake db:migrate
 ```
 
 [![coditsu](https://coditsu.io/assets/quality_bar.svg)](https://app.coditsu.io/krakow-ruby-users-group/repositories/krug-website/builds/commit_builds)
+
+## License
+
+KRUG-website is released under the [MIT License](https://opensource.org/licenses/MIT).
